@@ -16,5 +16,4 @@ Router.map(function () {
     this.route('edit');
   });
   this.route('students-loading');
-  this.route('about');
 });
