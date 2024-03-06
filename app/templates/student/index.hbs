@@ -1,0 +1,11 @@
+<p>Roll No : {{this.model.id}}</p>
+<p>First Name : {{this.model.firstName}}</p>
+<p>Last Name : {{this.model.lastName}}</p>
+<p>DOB : {{this.model.dob}}</p>
+<p>Gender : {{this.model.gender}}</p>
+<p>Address : {{this.model.address}}</p>
+<p>Phone Number : {{this.model.phoneNo}}</p>
+<p>Email : {{this.model.email}}</p>
+<button type="button" onclick={{action 'editStudent' this.model.id}}>Edit</button>
+<button type="button" onclick={{action 'deleteStudent' this.model}}>Delete</button>
+{{outlet}}

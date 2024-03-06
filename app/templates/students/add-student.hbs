@@ -1,0 +1,42 @@
+{{page-title "AddStudent"}}
+<h2>Student Details Form</h2>
+<div class="input">
+  <label for="rollno">Roll No: </label>
+  <Input id="rollno" @type="text" name="rollno" @value={{this.id}} placeholder="101" required />
+</div>
+<div class="input">
+  <label for="firstname">First Name: </label>
+  <Input id="firstname" @type="text" name="firstname" @value={{this.firstName}} placeholder="firstname" required/>
+</div>
+<div class="input">
+  <label for="lastname">Last Name: </label>
+  <Input id="lastname" @type="text" name="lastname" @value={{this.lastName}} placeholder="lastname" required />
+</div>
+<div class="input">
+  <label for="dob">DOB: </label>
+  <Input id="dob" @type="date" name="dob" @value={{this.dob}} required/>
+</div>
+<div class="input">
+  <label>Gender: </label>
+  <input id="male" type="radio" name="gender" value="Male" checked={{compare this.selectedGender "Male"}} onchange={{action (mut this.selectedGender) "Male"}}/>
+  <label for="male">Male</label>
+  <input id="female" type="radio" name="gender" value="Female" onchange={{action (mut this.selectedGender) "Female"}}/>
+  <label for="female">Female</label>
+</div>
+<div class="input">
+  <label for="address">Address: </label>
+  <Textarea id="address" name="address" @value={{this.address}}/>
+</div>
+<div class="input">
+  <label for="phoneno">Phone No: </label>
+  <Input id="phoneno" @type="tel" name="phoneno" @value={{this.phoneNo}} placeholder="1234567890" required/>
+</div>
+<div class="input">
+  <label for="email">Email: </label>
+  <Input id="email" @type="email" name="email" @value={{this.email}} placeholder="student@gmail.com" required/>
+</div>
+<button type="submit" onclick={{action 'addStudent'}}>Submit</button>
+
+
+
+{{outlet}} 

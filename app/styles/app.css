@@ -1,0 +1,27 @@
+/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+body {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.student-card {
+  width: 50%;
+  margin: 0 auto 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.input {
+  margin-top: 10px;
+}

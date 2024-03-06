@@ -1,0 +1,7 @@
+{{page-title "Login"}}
+<div>
+  <label for="username">Username: </label>
+  <Input id='username' name='username' @value={{this.username}} placeholder='Username' />
+</div>
+<button type='submit' onclick={{action 'userLogin'}}>Login</button>
+{{outlet}}

@@ -1,0 +1,7 @@
+<h2>Students List</h2>
+{{#each this.model as |student|}}
+{{!-- <p>{{student.id}} - {{concat student.firstName ' ' student.lastName}}</p> --}}
+<LinkTo @route='student' @model={{student.id}}><StudentCard @model={{student}}/></LinkTo>
+{{/each}}
+<button type="button" onclick={{action 'addStudent'}}>Add Student</button>
+{{outlet}}

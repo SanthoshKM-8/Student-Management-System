@@ -1,0 +1,11 @@
+{{page-title "Home"}}
+<h3>Welcome {{this.model.username}}</h3>
+<p>In this student management system you can able to </p>
+<p>View Students List</p>
+<p>Edit Student Record</p>
+<p>Add Student Record</p>
+<p>Delete Student Record</p>
+{{#unless this.model.isAuthenticated}}
+  <p>Please <LinkTo @route='login'>login</LinkTo> to continue</p>
+{{/unless}}
+{{outlet}}

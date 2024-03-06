@@ -1,0 +1,48 @@
+{{page-title "Edit"}}
+<div class="input">
+  <label for="rollno">Roll No: </label>
+  <Input id="rollno" @type="text" name="rollno" @value={{this.model.id}} placeholder="101" required disabled/>
+</div>
+<div class="input">
+  <label for="firstname">First Name: </label>
+  <Input id="firstname" @type="text" name="firstname" @value={{this.model.firstName}} placeholder="firstname" required/>
+</div>
+<div class="input">
+  <label for="lastname">Last Name: </label>
+  <Input id="lastname" @type="text" name="lastname" @value={{this.model.lastName}} placeholder="lastname" required />
+</div>
+<div class="input">
+  <label for="dob">DOB: </label>
+  <Input id="dob" @type="date" name="dob" @value={{this.model.dob}} required/>
+</div>
+<div class="input">
+  <label>Gender: </label>
+  {{!-- {{#if (compare this.model.gender "Male")}}
+  <input id="male" type="radio" name="gender" value="Male" checked/>
+  {{else}}
+  <input id="male" type="radio" name="gender" value="Male"/>
+  {{/if}} --}}
+  <input id="male" type="radio" name="gender" value="Male" checked={{compare this.model.gender "Male"}} onchange={{action (mut this.model.gender) "Male"}}/>
+  <label for="male">Male</label>
+  {{!-- {{#if (compare this.model.gender "Female")}}
+  <input id="female" type="radio" name="gender" value="Female" checked/>
+  {{else}}
+  <input id="female" type="radio" name="gender" value="Female" />
+  {{/if}} --}}
+  <input id="female" type="radio" name="gender" value="Female" checked={{compare this.model.gender "Female"}} onchange={{action (mut this.model.gender) "Female"}}/>
+  <label for="female">Female</label>
+</div>
+<div class="input">
+  <label for="address">Address: </label>
+  <Textarea id="address" name="address" @value={{this.model.address}}/>
+</div>
+<div class="input">
+  <label for="phoneno">Phone No: </label>
+  <Input id="phoneno" @type="tel" name="phoneno" @value={{this.model.phoneNo}} placeholder="1234567890" required/>
+</div>
+<div class="input">
+  <label for="email">Email: </label>
+  <Input id="email" @type="email" name="email" @value={{this.model.email}} placeholder="student@gmail.com" required/>
+</div>
+<button type="submit" onclick={{action 'editStudent'}}>Update</button>
+{{outlet}}
