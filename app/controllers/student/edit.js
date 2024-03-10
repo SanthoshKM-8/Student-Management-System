@@ -6,13 +6,6 @@ export default Controller.extend({
 
   actions: {
     editStudent() {
-      // let gender;
-      // document.getElementsByName('gender').forEach(function (element) {
-      //   if (element.checked) {
-      //     gender = element.value;
-      //   }
-      // });
-      // this.model.gender = gender;
       alert(`Student with rollNo ${this.model.id} updated successfully.`);
       this.router.transitionTo('student');
     },

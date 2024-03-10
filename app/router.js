@@ -15,5 +15,4 @@ Router.map(function () {
   this.route('student', { path: 'student/:student_id' }, function () {
     this.route('edit');
   });
-  this.route('students-loading');
 });
