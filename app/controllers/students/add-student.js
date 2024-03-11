@@ -4,6 +4,7 @@ import { inject as service } from '@ember/service';
 export default Controller.extend({
   database: service(),
   router: service(),
+  store: service(),
   id: '',
   firstName: '',
   lastName: '',
@@ -26,7 +27,8 @@ export default Controller.extend({
         email: this.email,
       };
       console.log(student);
-      this.database.students.pushObject(student);
+      this.store.createRecord('student', student).save();
+      // this.database.students.pushObject(student);
       alert(`Student ${this.firstName} ${this.lastName} added successfully.`);
       this.router.transitionTo('students');
     },
