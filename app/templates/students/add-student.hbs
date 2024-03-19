@@ -2,7 +2,7 @@
 <h2>Student Details Form</h2>
 <div class="input">
   <label for="rollno">Roll No: </label>
-  <Input id="rollno" @type="text" name="rollno" @value={{this.id}} placeholder="101" required />
+  <Input id="rollno" @type="text" name="rollno" @value={{this.id}} placeholder="101" required {{on-key}}/>
 </div>
 <div class="input">
   <label for="firstname">First Name: </label>
@@ -10,7 +10,7 @@
 </div>
 <div class="input">
   <label for="lastname">Last Name: </label>
-  <Input id="lastname" @type="text" name="lastname" @value={{this.lastName}} placeholder="lastname" required />
+  <Input id="lastname" @type="text" name="lastname" @value={{this.lastName}} placeholder="lastname" required/>
 </div>
 <div class="input">
   <label for="dob">DOB: </label>
@@ -36,7 +36,14 @@
   <Input id="email" @type="email" name="email" @value={{this.email}} placeholder="student@gmail.com" required/>
 </div>
 <button type="submit" onclick={{action 'addStudent'}}>Submit</button>
+{{!-- <Input @type="checkbox" @checked={{this.isGood}}/>
+<Input  @value={{this.iAmGood}}/>
+<Input  @value={{this.iAmGood}}/> --}}
+{{!-- {{#each this.iAmGood as |num|}}
+<p>{{num.name}}</p>
+{{/each}} --}}
+{{!-- <div>{{this.iAmGood}}</div> --}}
 
 
 
-{{outlet}} 
+{{outlet}}

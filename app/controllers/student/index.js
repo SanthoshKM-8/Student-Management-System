@@ -15,9 +15,11 @@ export default Controller.extend({
       if (
         confirm(`Do you want to delete ${student.firstName} student record?`)
       ) {
-        this.store.findRecord('student', student.id, { backgroundReload: false }).then(function(student) {
-          student.destroyRecord();
-        });
+        this.store
+          .findRecord('student', student.id, { backgroundReload: false })
+          .then(function (student) {
+            student.destroyRecord();
+          });
         // this.database.students.removeObject(student);
         this.router.transitionTo('students');
       }

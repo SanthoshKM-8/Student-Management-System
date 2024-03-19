@@ -20,4 +20,3 @@ export default JSONAPIAdapter.extend({
   }
 
 });
-
